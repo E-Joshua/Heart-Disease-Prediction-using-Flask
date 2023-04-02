@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Heart Disease Prediction</title>
+    </head>
+    <body>
+        <h1>Heart Disease Prediction</h1>
+        <form method="POST" action="{{ url_for('predict') }}">
+            <label for="model">Choose a model:</label>
+            <select name="model" id="model">
+                <option value="Random Forest">Random Forest</option>
+                <option value="Logistic Regression">Logistic Regression</option>
+                <option value="Decision Tree">Decision Tree</option>
+            </select>
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
+            <label for="sex">Sex (0 for female, 1 for male):</label>
+            <input type="number" id="sex" name="sex" required><br><br>
+            <label for="cp">Chest pain type:</label>
+            <input type="number" id="cp" name="cp" required><br><br>
+            <label for="bp">Blood pressure:</label>
+            <input type="number" id="bp" name="bp" required><br><br>
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="number" id="cholesterol" name="cholesterol" required><br><br>
+            <label for="fbs">Fasting blood sugar over 120 (0 for no, 1 for yes):</label>
+            <input type="number" id="fbs" name="fbs" required><br><br>
+            <label for="ekg">EKG results:</label>
+            <input type="number" id="ekg" name="ekg" required><br><br>
+            <label for="max_hr">Maximum heart rate achieved:</label>
+            <input type="number" id="max_hr" name="max_hr" required><br><br>
+            <label for="ex_angina">Exercise induced angina (0 for no, 1 for yes):</label>
+            <input type="number" id="ex_angina" name="ex_angina" required><br><br>
+            <label for="st_depression">ST depression induced by exercise relative to rest:</label>
+            <input type="number" step="0.1" id="st_depression" name="st_depression" required><br><br>
+            <label for="slope">Slope of the peak exercise ST segment:</label>
+            <input type="number" id="slope" name="slope" required><br><br>
+            <label for="vessels">Number of major vessels colored by fluroscopy:</label>
+            <input type="number" id="vessels" name="vessels" required><br><br>
+            <label for="thallium">Thallium stress test:</label>
+            <input type="number" id="thallium" name="thallium" required><br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </body>
+</html>
+
+
